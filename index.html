@@ -7,18 +7,30 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="https://unpkg.com/reset-css/reset.css"> -->
+    <link rel="stylesheet" href="./assets/typography.css">
+    <link rel="stylesheet" href="./assets/components.css">
+    <link rel="stylesheet" href="./assets/utils.css">
     <link rel="stylesheet" href="./assets/style.css">
+
+    <script src="./assets/navbar.js" defer></script>
 </head>
 <body>
     <nav>
-        <div class="container m-auto df f-between">
+        <div class="container m-auto df f-between f-a-center px-2">
             <h3>Jobly</h3>
-            <div class="df actions">
+            <button class="d-none sm-d-block" id="nav-toggle">
+                <img src="./assets/imgs/collapseButton.svg" alt="collapse button">
+            </button>
+            <div class="df actions sm-d-none">
                 <button> For Recruiters </button>
                 <button class="colored"> Sign Up </button>
                 <button class="outlined"> Log in </button>
             </div>
+        </div>
+        <div class="d-none sm-df actions sm-f-column" id="nav-collapse">
+            <button class="colored"> Sign Up </button>
+            <button class="outlined"> Log in </button>
+            <button class="outlined"> For Recruiters </button>
         </div>
     </nav>
     
@@ -32,8 +44,11 @@
     </section>
     
     <section class="df f-center">
-        <div class="container">
-            <img src="./assets/imgs/hero.jfif" alt="work">
+        <div class="container px-2">
+            <picture>
+                <source media="(max-width: 768px)" srcset="./assets/imgs/hero-mobile.jpg" />
+                <img src="./assets/imgs/hero.jfif" alt="work">
+            </picture>
         </div>
     </section>
     
@@ -53,9 +68,12 @@
         <h2>Everything you want to know in one place.</h2>
         <div class="container df f-center" id="background">
             <div class="bitmap"></div>
-            <img src="./assets/imgs/Hero.png" alt="">
+            <picture>
+                <source media="(max-width: 768px)" srcset="./assets/imgs/hero2-mobile.png" />
+                <img src="./assets/imgs/hero2.png" alt="example">
+            </picture>
         </div>
-        <div class="container df f-between g-50" id="cards">
+        <div class="container cards g-50 px-2">
             <div class="card active">
                 <h3>Professional Profile</h3>
                 <p>We know finding the right job is stressful, so we’ve made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter</p>
@@ -72,9 +90,9 @@
     </section>
 
     <section>
-        <div class="container df m-auto">
+        <div class="container df m-auto f-a-center px-2 md-f-column-r">
             <img src="./assets/imgs/section6.jfif" alt="people">
-            <div class="df f-column">
+            <div class="df f-column md-text-center">
                 <h2>Connect With Recruiter</h2>
                 <p>Get instant access to a curated pool of top creative & tech talent actively seeking their next role. <br> Find highly qualified job!</p>
             </div>
@@ -82,8 +100,8 @@
     </section>
 
     <section class="bg-black df">
-        <div class="container m-auto">
-            <div class="df f-column">
+        <div class="container m-auto f-a-center px-2">
+            <div class="df f-column f-a-start f-j-center sm-f-a-center sm-text-center">
                 <h2 class="text-white">Set up your profile. <br> Let jobs find you.</h2>
                 <button class="colored">Join Now</button>
             </div>
@@ -92,12 +110,12 @@
     </section>
 
     <footer>
-        <div class="container m-auto df f-column g-50">
+        <div class="container m-auto df f-column g-50 px-2">
             <div>
                 <h3>Jobly.co</h3>
                 <p>We support a pool of diverse young creatives and engineers. </p>
             </div>
-            <div class="df f-between">
+            <div class="df f-between sm-f-column">
                 <p class="text-black"><b> © 2023 Jobly.co Copyright and All rights reserved. </b></p>
                 <p class="text-black"><b> Terms and Conditions · Privacy Policy </b></p>
             </div>
